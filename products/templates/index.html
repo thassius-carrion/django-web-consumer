@@ -4,34 +4,33 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Municípios do RN</title>
+    <title>BELLA FIORI FLORICULTURA</title>
   </head>
   <body>
     <section class="container">
         <nav>
           <ul class="nav">
-            <li class="nav-item"><h1>Municipios do Rio Grande do Norte - IBGE</h1></li>
+            <li class="nav-item"><h1>Produtos </h1></li>
           </ul>
         </nav>
     </section>
-
     <div class="container">
       <table class="table">
         <thead class="thead-dark">
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">MUNICÍPIO </th>
-            <th scope="col">MICROREGIÃO </th>
-            <th scope="col">MESORREGIÃO </th>
+            <th scope="col">NAME </th>
+            <th scope="col">PRICE </th>
+            <th scope="col">DETAILS </th>
           </tr>
         </thead>
         <tbody>
-          {% for indice, municipio in municipios.items %}
+          {% for indice, products in products.items %}
             <tr>
-              <th scope="row">{{ municipio.id }}</th>
-              <td>{{ municipio.nome }}</td>
-              <td>{{ municipio.microrregiao.nome }}</td>
-              <td>{{ municipio.microrregiao.mesorregiao.nome }}</td>
+              <th scope="row">{{ products.id }}</th>
+              <td>{{ products.name }}</td>
+              <td>{{ products.price }}</td>
+              <td>{{ products.details }}</td>
             </tr>
           {% endfor %}
         </tbody>
